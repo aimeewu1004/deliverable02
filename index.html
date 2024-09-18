@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Country Athlete Dashboard</title>
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+</head>
+<body>
+
+    <!-- Top Half -->
+    <section id="top-half">
+        <div class="left-side">
+            <!-- Athlete Profile Info -->
+            <div class="athlete-info">
+                <img src="athlete-photo.jpg" alt="Athlete Photo" id="athlete-picture">
+                <h3 class="athlete-name">Athlete Name</h3>
+                <p class="athlete-year">Year: Senior</p>
+            </div>
+
+            <!-- Runner's School Info -->
+            <div class="school-info">
+                <!-- Link to Team's page -->
+                <a href="https://www.athletic.net/team/29445/cross-country/2024">  
+                <img src="school-logo.jpg" alt="School Logo" id="school-logo">
+                </a>
+                <h4>Ann Arbor Skyline</h4>
+            </div>
+
+            <!-- Athlete Race Data -->
+            <div class="season-records">
+                <h3>Season Records</h3>
+                <ul>
+                    <li>1600 meters - 4:45</li>
+                    <li>5000 meters - 15:30 (PR)</li>
+                </ul>
+            </div>
+
+            <!-- Runner Rankings/Placement -->
+            <div class="rankings">
+                <h3>Rankings</h3>
+                <h4>5,000 Meters</h4>
+                <ul>
+                    <li>Team: [python]</li>
+                    <li>Region 4: [python]</li>
+                    <li>Division 1: [python]</li>
+                    <li>Lower Peninsula: [python]</li>
+                    <li>Michigan: [python]</li>
+                    <li>United States: [python]</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <!-- Runner's Progress Graph -->
+            <div id="progress-graph">
+                <h3>Runner's Progress Over the Years</h3>
+                <!-- Placeholder for graph -->
+                <canvas id="progressChart" width="400" height="300"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Middle Section -->
+    <section id="middle">
+        <h2>Races</h2>
+        <h3>2024</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Race Name</th>
+                    <th>Place</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Coach Comments</th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td colspan="5">
+                    <h4>5,000 Meters</h4>
+                </td>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td>State Championships</td>
+                    <td>1st</td>
+                    <td>15:45</td>
+                    <td>October 15, 2023</td>
+                    <td>Great performance, kept strong pace throughout</td>
+                </tr>
+                <tr>
+                    <td>County Meet</td>
+                    <td>2nd</td>
+                    <td>4:50</td>
+                    <td>September 30, 2023</td>
+                    <td>Need to improve the final lap, but solid effort</td>
+                </tr>
+                <!-- More rows can be added here -->
+            </tbody>
+
+            <tr>
+                <td colspan="5">
+                    <h4>1,600 Meters</h4>
+                </td>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td>State Championships</td>
+                    <td>1st</td>
+                    <td>15:45</td>
+                    <td>October 15, 2023</td>
+                    <td>Great performance, kept strong pace throughout</td>
+                </tr>
+                <tr>
+                    <td>County Meet</td>
+                    <td>2nd</td>
+                    <td>4:50</td>
+                    <td>September 30, 2023</td>
+                    <td>Need to improve the final lap, but solid effort</td>
+                </tr>
+                <!-- More rows can be added here -->
+            </tbody>
+
+        </table>
+
+        <h3>2023</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Race Name</th>
+                    <th>Place</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Coach Comments</th>
+                </tr>
+            </thead>
+            
+            <tr>
+                <td colspan="5">
+                    <h4>5,000 Meters</h4>
+                </td>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td>State Championships</td>
+                    <td>1st</td>
+                    <td>15:45</td>
+                    <td>October 15, 2023</td>
+                    <td>Great performance, kept strong pace throughout</td>
+                </tr>
+                <tr>
+                    <td>County Meet</td>
+                    <td>2nd</td>
+                    <td>4:50</td>
+                    <td>September 30, 2023</td>
+                    <td>Need to improve the final lap, but solid effort</td>
+                </tr>
+                <!-- More rows can be added here -->
+            </tbody>
+
+            <tr>
+                <td colspan="5">
+                    <h4>1,600 Meters</h4>
+                </td>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td>State Championships</td>
+                    <td>1st</td>
+                    <td>15:45</td>
+                    <td>October 15, 2023</td>
+                    <td>Great performance, kept strong pace throughout</td>
+                </tr>
+                <tr>
+                    <td>County Meet</td>
+                    <td>2nd</td>
+                    <td>4:50</td>
+                    <td>September 30, 2023</td>
+                    <td>Need to improve the final lap, but solid effort</td>
+                </tr>
+                <!-- More rows can be added here -->
+            </tbody>
+
+        </table>
+
+       
+    </section>
+
+    <!-- Bottom Half -->
+    <section id="bottom-half">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <p>Upload and view race photos:</p>
+            <form action="/upload-photo" method="post" enctype="multipart/form-data">
+                <input type="file" name="race-photo" id="race-photo">
+                <button type="submit">Upload Photo</button>
+            </form>
+
+            <div class="photos">
+                <h3>Uploaded Photos</h3>
+                <img src="race-photo1.jpg" alt="Race Photo 1" class="race-photo">
+                <img src="race-photo2.jpg" alt="Race Photo 2" class="race-photo">
+                <!-- More uploaded photos can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cross Country Dashboard</p>
+    </footer>
+
+</body>
+</html>
