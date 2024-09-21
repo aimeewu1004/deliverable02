@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrienne Stewart Dashboard</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#athlete_profile">Athlete Profile</a></li>
+                <li><a href="#athlete_races">Athlete Races</a></li>
+                <li><a href="#photo_gallery">Photo Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Top Half -->
+    <section id="athlete_profile">
+        <div class="left-side">
+            <!-- Athlete Profile Info -->
+            <div class="athlete-info">
+                <img src="images/AthleteImages/AdrienneStewart_SECJamboree#1(JuniorVarsity)_y).jpg" alt="Adrienne Stewart" id="athlete-picture">
+                <h1 class="athlete-name">Adrienne Stewart</h1>
+                <p class="athlete-grade">Year: 11</p>
+            </div>
+
+            <!-- Athlete's School Info -->
+            <div class="school-info">
+                <a href="team_page_link">
+                    <img src="team_logo_url" alt="School Logo" id="school-logo">
+                    <h4>Ann Arbor Skyline</h4>
+                </a>
+            </div>
+
+            <!-- Athlete Race Data -->
+            <div class="season-records">
+                <h3>Season Records</h3>
+                
+                <h4>5000 meters</h4><table><thead><tr><th>Year</th><th>Grade</th><th>Record Time</th></tr></thead><tbody><tr><td>9</td><td>2022</td><td>22:40.6</td></tr><tr><td>10</td><td>2023</td><td>22:21.2PR *</td></tr><tr><td>11</td><td>2024</td><td>23:31.1</td></tr></tbody></table>
+            
+            </div>
+
+            <!-- Athlete Rankings/Placement -->
+            <div class="rankings">
+                <h3>Rankings</h3>
+                <h4>5000 meters</h4>
+                <ul>
+                    <li>Team: team_rank</li>
+                    <li>Region 4: region_ranking</li>
+                    <li>Division 1: division_ranking</li>
+                    <li>Lower Peninsula: lower_peninsula_ranking</li>
+                    <li>Michigan: state_ranking</li>
+                    <li>United States: national_ranking</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <!-- Athlete's Progress Graph -->
+            <div id="progress-graph">
+                <h3>Runner's Progress Over the Years</h3>
+                <canvas id="progressChart" width="400" height="300"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Middle Section -->
+    <section id="athlete_races">
+        <h3>Unknown Year</h3>
+<table>
+<thead>
+<tr><th>Race Name</th><th>Place</th><th>Time</th><th>Date</th><th>Coach Comments</th></tr>
+</thead>
+<tbody>
+<tr><td>SEC Jamboree #1 (Junior Varsity)</td><td>20</td><td>24:40.6</td><td>10-Sep</td><td>Great run! If only we could bottle that energy for Monday mornings.</td></tr><tr><td>56th Holly-Duane Raffin Festival of Races (D1 JV Girls)</td><td>15</td><td>23:31.1 SR</td><td>14-Sep</td><td>Awesome race! Let's look at where we can shave off a few more seconds.</td></tr><tr><td>Lamplighter Invite (Girls Varsity - Flight Two)</td><td>121</td><td>22:34.7</td><td>18-Aug</td><td>Nice job! You really finished strong.</td></tr><tr><td>Early Bird Open (Open Women's 5K)</td><td>20</td><td>22:21.2PR</td><td>31-Aug</td><td></td></tr><tr><td>Bret Clements Bath Invitational (Class 1)</td><td>79</td><td>25:20.1</td><td>9-Sep</td><td>You really pushed hard in that final mile, awesome finish!</td></tr><tr><td>2023 Portage XC Invitational (Division 1 Reserve)</td><td>155</td><td>24:07.1</td><td>7-Oct</td><td></td></tr><tr><td>39th Fr Gabriel Richard Cross Country Invite (JV Large School Div)</td><td>9</td><td>23:30.2</td><td>14-Oct</td><td></td></tr><tr><td>SEC HS Championship (All Division Reserve)</td><td>51</td><td>24:21.0</td><td>19-Oct</td><td></td></tr><tr><td>Post Regional Open Meet (PROM) - Springfiled Oaks</td><td>27</td><td>23:42.6</td><td>28-Oct</td><td>You really pushed hard in that final mile, awesome finish!</td></tr><tr><td>22 Saline Early Bird</td><td>153</td><td>29:04.5</td><td>1-Sep</td><td></td></tr><tr><td>Bret Clements Bath Invitational (J.V.)</td><td>40</td><td>24:50.1</td><td>10-Sep</td><td>Super strong start! We'll work on keeping that energy the whole race.</td></tr><tr><td>SEC-HS Jamboree 1 (All Division Reserve GIRLS)</td><td>48</td><td>25:20.9</td><td>14-Sep</td><td>I blinked and missed the first half of your race! That was quick!</td></tr><tr><td>SEC-HS Jamboree 2 (Red) (Reserve Girls)</td><td>29</td><td>24:25.5</td><td>28-Sep</td><td></td></tr><tr><td>2022 Portage XC Invitational (Division 1 Reserve)</td><td>125</td><td>23:35.2</td><td>8-Oct</td><td>You made some great moves on the hills. Keep working on your endurance.</td></tr><tr><td>38th Annual Gabriel Richard Invitational (JV - Large Schools)</td><td>32</td><td>23:47.3</td><td>15-Oct</td><td>Awesome race! Let's look at where we can shave off a few more seconds.</td></tr><tr><td>SEC-HS Championship (All Division Reserve)</td><td>46</td><td>22:46.4</td><td>20-Oct</td><td>Are you sure you're not part cheetah? That was fast!</td></tr><tr><td>Brighton PROM</td><td>35</td><td>22:40.6 SR</td><td>27-Oct</td><td>Nice job! You really finished strong.</td></tr></tbody>
+</table>
+
+    </section>
+
+    <!-- Bottom Half -->
+    <section id="photo_gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <p>Upload and view race photos:</p>
+            <form action="/upload-photo" method="post" enctype="multipart/form-data">
+                <label for="race-photo">Upload a race photo:</label>
+                <input type="file" name="race-photo" id="race-photo">
+                <button type="submit">Upload Photo</button>
+            </form>
+
+            <div class="photos">
+                <h3>Uploaded Photos</h3>
+                <img src='images/SEC Jamboree #1 (Junior Varsity)/AdrienneStewart_SECJamboree#1(JuniorVarsity)_y).jpg' alt='SEC Jamboree #1 (Junior Varsity)' class='race-photo'>
+<img src='images/56th Holly-Duane Raffin Festival of Races (D1 JV Girls)/AdrienneStewart_56thHolly-DuaneRaffinFestivalofRaces(D1JVGirls)_s).jpg' alt='56th Holly-Duane Raffin Festival of Races (D1 JV Girls)' class='race-photo'>
+<img src='images/Lamplighter Invite (Girls Varsity - Flight Two)/AdrienneStewart_LamplighterInvite(GirlsVarsity-FlightTwo)_o).jpg' alt='Lamplighter Invite (Girls Varsity - Flight Two)' class='race-photo'>
+<img src='images/Early Bird Open (Open Women's 5K)/AdrienneStewart_EarlyBirdOpen(OpenWomen's5K)_K).jpg' alt='Early Bird Open (Open Women's 5K)' class='race-photo'>
+<img src='images/Bret Clements Bath Invitational (Class 1)/AdrienneStewart_BretClementsBathInvitational(Class1)_1).jpg' alt='Bret Clements Bath Invitational (Class 1)' class='race-photo'>
+<img src='images/2023 Portage XC Invitational (Division 1 Reserve)/AdrienneStewart_2023PortageXCInvitational(Division1Reserve)_e).jpg' alt='2023 Portage XC Invitational (Division 1 Reserve)' class='race-photo'>
+<img src='images/39th Fr Gabriel Richard Cross Country Invite (JV Large School Div)/AdrienneStewart_39thFrGabrielRichardCrossCountryInvite(JVLargeSchoolDiv)_v).jpg' alt='39th Fr Gabriel Richard Cross Country Invite (JV Large School Div)' class='race-photo'>
+<img src='images/SEC HS Championship (All Division Reserve)/AdrienneStewart_SECHSChampionship(AllDivisionReserve)_e).jpg' alt='SEC HS Championship (All Division Reserve)' class='race-photo'>
+<img src='images/Post Regional Open Meet (PROM) - Springfiled Oaks/AdrienneStewart_PostRegionalOpenMeet(PROM)-SpringfiledOaks_ks.jpg' alt='Post Regional Open Meet (PROM) - Springfiled Oaks' class='race-photo'>
+<img src='images/22 Saline Early Bird/AdrienneStewart_22SalineEarlyBird_rd.jpg' alt='22 Saline Early Bird' class='race-photo'>
+<img src='images/Bret Clements Bath Invitational (J.V.)/AdrienneStewart_BretClementsBathInvitational(J.V.)_.).jpg' alt='Bret Clements Bath Invitational (J.V.)' class='race-photo'>
+<img src='images/SEC-HS Jamboree 1 (All Division Reserve GIRLS)/AdrienneStewart_SEC-HSJamboree1(AllDivisionReserveGIRLS)_S).jpg' alt='SEC-HS Jamboree 1 (All Division Reserve GIRLS)' class='race-photo'>
+<img src='images/SEC-HS Jamboree 2 (Red) (Reserve Girls)/AdrienneStewart_SEC-HSJamboree2(Red)(ReserveGirls)_s).jpg' alt='SEC-HS Jamboree 2 (Red) (Reserve Girls)' class='race-photo'>
+<img src='images/2022 Portage XC Invitational (Division 1 Reserve)/AdrienneStewart_2022PortageXCInvitational(Division1Reserve)_e).jpg' alt='2022 Portage XC Invitational (Division 1 Reserve)' class='race-photo'>
+<img src='images/38th Annual Gabriel Richard Invitational (JV - Large Schools)/AdrienneStewart_38thAnnualGabrielRichardInvitational(JV-LargeSchools)_s).jpg' alt='38th Annual Gabriel Richard Invitational (JV - Large Schools)' class='race-photo'>
+<img src='images/SEC-HS Championship (All Division Reserve)/AdrienneStewart_SEC-HSChampionship(AllDivisionReserve)_e).jpg' alt='SEC-HS Championship (All Division Reserve)' class='race-photo'>
+<img src='images/Brighton PROM/AdrienneStewart_BrightonPROM_OM.jpg' alt='Brighton PROM' class='race-photo'>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cross Country Dashboard</p>
+    </footer>
+
+</body>
+</html>
