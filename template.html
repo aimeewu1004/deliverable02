@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{athlete_name} Dashboard</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#athlete_profile">Athlete Profile</a></li>
+                <li><a href="#athlete_races">Athlete Races</a></li>
+                <li><a href="#photo_gallery">Photo Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Top Half -->
+     <!-- changed the id names to make it more semantic -->
+    <section id="athlete_profile"> 
+        <div class="left-side">
+            <!-- Athlete Profile Info -->
+            <div class="athlete-info">
+                <img src=images/AthleteImages/{athlete_photo} alt="{athlete_name}" id="athlete-picture"> 
+                <!-- not sure why we need id for img here -->
+                <h1 class="athlete-name">{athlete_name}</h1>
+                <p class="athlete-grade">Year: {athlete_grade}</p>
+            </div>
+
+            <!-- Athlete's School Info -->
+            <div class="school-info">
+                <!-- Link to Team's page -->
+                <a href="{team_page_link}">  
+                    <img src="{team_logo_url}" alt="School Logo" id="school-logo">
+                    <h4>Ann Arbor Skyline</h4>
+                </a>
+            </div>
+
+            <!-- Athlete Race Data -->
+            <div class="season-records">
+                <h3>Season Records</h3>
+                <h4>{distance1}</h4>
+                <!-- change to table -->
+                <!-- loop through record time for each year the athlete have ran -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Grade</th>
+                            <th>Record Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{year1}</td>
+                            <td>{grade1}</td>
+                            <td>{record_time1}</td>
+                        </tr>
+                        <tr>
+                            <td>{year2}</td>
+                            <td>{grade2}</td>
+                            <td>{record_time2}</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- repeat if athelete runs more than one distance (ie: 5000 meters and 1600 meters) -->
+                <h4>{distance2}</h4>
+                <!-- loop through record time for each year the athlete have ran -->
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Grade</th>
+                            <th>Record Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{year1}</td>
+                            <td>{grade1}</td>
+                            <td>{record_time1}</td>
+                        </tr>
+                        <tr>
+                            <td>{year2}</td>
+                            <td>{grade2}</td>
+                            <td>{record_time2}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Athlete Rankings/Placement -->
+            <div class="rankings">
+                <h3>Rankings</h3>
+                <h4>{distance1}</h4>
+                <ul>
+                    <li>Team: {team_rank}</li>
+                    <li>Region 4: {region_ranking}</li>
+                    <li>Division 1: {division_ranking}</li>
+                    <li>Lower Peninsula: {lower_peninsula_ranking}</li>
+                    <li>Michigan: {state_ranking}</li>
+                    <li>United States: {national_ranking}</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <!-- Athlete's Progress Graph -->
+            <div id="progress-graph">
+                <h3>Runner's Progress Over the Years</h3>
+                <!-- Placeholder for graph -->
+                <canvas id="progressChart" width="400" height="300"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Middle Section -->
+    <section id="athlete_races">
+        <h2>Races</h2>
+        <h3>2024</h3>
+        <h4>{distance1}</h4>
+        <!-- would it be more clean if we did the toggle between tables? for the distances  -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Race Name</th>
+                    <th>Place</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Coach Comments</th>
+                </tr>
+            </thead>
+            
+    
+            <tbody>
+                <!-- Repeat this for each of athlete's meets -->
+                <tr>
+                    <td>{meet_name}</td>
+                    <td>{meet_place}</td>
+                    <td>{meet_time}</td>
+                    <td>{meet_date}</td>
+                    <td>{meet_comments}</td>
+                </tr>
+                <tr>
+                    <td>{meet_name}</td>
+                    <td>{meet_place}</td>
+                    <td>{meet_time}</td>
+                    <td>{meet_date}</td>
+                    <td>{meet_comments}</td>
+                </tr>
+                <!-- More rows can be added here -->
+            </tbody>
+        </table>
+        
+        
+    <h4>{distance2}</h4>
+        <!-- would it be more clean if we did the toggle between tables? for the distances  -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Race Name</th>
+                    <th>Place</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Coach Comments</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <!-- Repeat this for each of athlete's meets -->
+                <tr>
+                    <td>{meet_name}</td>
+                    <td>{meet_place}</td>
+                    <td>{meet_time}</td>
+                    <td>{meet_date}</td>
+                    <td>{meet_comments}</td>
+                </tr>
+                <tr>
+                    <td>{meet_name}</td>
+                    <td>{meet_place}</td>
+                    <td>{meet_time}</td>
+                    <td>{meet_date}</td>
+                    <td>{meet_comments}</td>
+                </tr>
+                <!-- More rows can be added here -->
+            </tbody>
+        </table>
+
+
+        <h3>2023</h3>
+
+        <h4>{distance1}</h4>
+        <!-- would it be more clean if we did the toggle between tables? for the distances  -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Race Name</th>
+                    <th>Place</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Coach Comments</th>
+                </tr>
+            </thead>
+            
+    
+            <tbody>
+                <!-- Repeat this for each of athlete's meets -->
+                <tr>
+                    <td>{meet_name}</td>
+                    <td>{meet_place}</td>
+                    <td>{meet_time}</td>
+                    <td>{meet_date}</td>
+                    <td>{meet_comments}</td>
+                </tr>
+                <tr>
+                    <td>{meet_name}</td>
+                    <td>{meet_place}</td>
+                    <td>{meet_time}</td>
+                    <td>{meet_date}</td>
+                    <td>{meet_comments}</td>
+                </tr>
+                <!-- More rows can be added here -->
+            </tbody>
+        </table>
+        
+        
+    <h4>{distance2}</h4>
+        <!-- would it be more clean if we did the toggle between tables? for the distances  -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Race Name</th>
+                    <th>Place</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Coach Comments</th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <!-- Repeat this for each of athlete's meets -->
+                <tr>
+                    <td>{meet_name}</td>
+                    <td>{meet_place}</td>
+                    <td>{meet_time}</td>
+                    <td>{meet_date}</td>
+                    <td>{meet_comments}</td>
+                </tr>
+                <tr>
+                    <td>{meet_name}</td>
+                    <td>{meet_place}</td>
+                    <td>{meet_time}</td>
+                    <td>{meet_date}</td>
+                    <td>{meet_comments}</td>
+                </tr>
+                <!-- More rows can be added here -->
+            </tbody>
+        </table>
+
+    </section>
+
+    <!-- Bottom Half -->
+    <section id="photo_gallery">
+        <h2>Photo Gallery</h2>
+        <div class="gallery">
+            <p>Upload and view race photos:</p>
+            <form action="/upload-photo" method="post" enctype="multipart/form-data">
+                <label for="race-photo">Upload a race photo:</label>
+                <input type="file" name="race-photo" id="race-photo">
+                <button type="submit">Upload Photo</button>
+            </form>
+
+            <div class="photos">
+                <h3>Uploaded Photos</h3>
+                <!-- loop through each race the athlete ran in -->
+                <img src="{athlete_race1_photo}" alt="{race_name1}" class="race-photo">
+                <img src="athlete_race2_photo" alt="{race_name2}" class="race-photo">
+                <!-- More uploaded photos can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Cross Country Dashboard</p>
+    </footer>
+
+</body>
+</html>
